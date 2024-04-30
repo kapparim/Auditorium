@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 207382012c7585f4e8466ef4618b927a
+guid: 542afc305f374c741b9998f35d4e26d9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - _particlePrefab: {fileID: 8832037964430473030, guid: 3d26f07bbc1b3d44cba8bc0447f47167, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

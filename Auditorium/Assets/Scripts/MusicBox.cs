@@ -6,16 +6,20 @@ using UnityEngine;
 public class MusicBox : MonoBehaviour
 {
     public AudioSource _audioSource;
-    public Color _offColor = Color.black;
-    public Color _onColor = Color.white;
+    public Color _onColor;
+    public Color _offColor;
     public SpriteRenderer[] _bars;
-    public float volumeChangeRate = 0.1f; 
-    public float volumeIncrement = 0.1f;
+
+    [Header("Volume")]
+    [Tooltip("Volume gain per particle")]
+    public float volumeIncrement = 0.02f;
+    [Tooltip("Volume lost per second")]
+    public float volumeDecay = 0.1f;
+    [Tooltip("Time beforde decrementing volume")]
     public float decayInterval = 1f;
 
     private float _chrono = 0f;
 
-    // Start is called before the first frame update
     void Start()
     {
         _audioSource.volume = 0f;
@@ -24,10 +28,12 @@ public class MusicBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // En fonction de la propriété _audioSource.volume le bon nombre de barre s'allume
+
         for (int i = 0; i < _bars.Length; i++)
         {
             float seuil = (float)i / (float)_bars.Length;
-            
+
             if (_audioSource.volume > seuil)
             {
                 // on allume la barre
@@ -39,16 +45,15 @@ public class MusicBox : MonoBehaviour
                 _bars[i].color = _offColor;
             }
         }
-            if (_chrono >= decayInterval)
-            {
-                _audioSource.volume -= volumeChangeRate * Time.deltaTime;
-            }
-            else
-            {
-                _chrono += Time.deltaTime;
-            }
 
-        _audioSource.volume -= volumeChangeRate * Time.deltaTime;
+        if (_chrono >= decayInterval)
+        {
+            _audioSource.volume -= volumeDecay * Time.deltaTime;
+        }
+        else
+        {
+            _chrono += Time.deltaTime;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

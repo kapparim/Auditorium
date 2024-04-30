@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3501039476452216257}
   - component: {fileID: 759312924754433304}
   - component: {fileID: 56335716674114324}
+  - component: {fileID: 7399755036997430595}
   m_Layer: 0
-  m_Name: Curseur
-  m_TagString: Untagged
+  m_Name: Anneau
+  m_TagString: Anneau
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,6 +251,24 @@ MonoBehaviour:
   _segmentCount: 32
   _radius: 1
   _colliderMargin: 0
+--- !u!114 &7399755036997430595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416071044634087946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 542afc305f374c741b9998f35d4e26d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerIcon: {fileID: 2800000, guid: 7a9a0dd7570af2745a00bd060fbda302, type: 3}
+  resizeIcon: {fileID: 2800000, guid: 3044446006d994f4cafbb545084e6e6b, type: 3}
+  minRadius: 1
+  maxRadius: 10
+  magnitudeMinimum: 4
+  radiusRatio: 4
 --- !u!1 &7651704441418983917
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,8 +281,8 @@ GameObject:
   - component: {fileID: 1799570444033509627}
   - component: {fileID: 6150685287944810959}
   m_Layer: 0
-  m_Name: Triangle
-  m_TagString: Untagged
+  m_Name: Fleche
+  m_TagString: Fleche
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,7 +344,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 15392ac6536e34e45ab65d971e74f330, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9245283, g: 0.65850836, b: 0.65850836, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -364,7 +383,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

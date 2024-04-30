@@ -275,10 +275,10 @@
                 {
                     "name": "",
                     "id": "554502cd-725f-4d20-87c7-1a20b359d538",
-                    "path": "<Mouse>/position",
+                    "path": "<Pointer>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "Keyboard&Mouse;Touch",
                     "action": "Position",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -286,10 +286,10 @@
                 {
                     "name": "",
                     "id": "34861279-eb86-41a2-8c51-bc460b651eb7",
-                    "path": "<Mouse>/press",
+                    "path": "<Pointer>/press",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
+                    "groups": "Keyboard&Mouse;Touch",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false

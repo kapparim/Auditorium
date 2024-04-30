@@ -3,12 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Particle
+  - Anneau
+  - Fleche
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particule
   - Water
   - UI
   - 
